@@ -1,0 +1,400 @@
+{
+	"variables": [],
+	"info": {
+		"name": "295b",
+		"_postman_id": "4833e190-2779-db9d-e2b9-20c885f8a7a5",
+		"description": "",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "http://localhost:8080/caregivers",
+			"request": {
+				"url": "http://localhost:8080/caregivers/",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGFlMTM1ZTAzMDU4NzIzMmNjNTE0OTciLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDg4MjY1ODMwLCJleHAiOjE0ODg4NzA2MzB9.RI4BaUTu2-gVf666eKxINypCr60j1KlWjp0H3UwrIV8",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "at",
+							"value": "AObGSAh_yaBxuaCXKN7FHzHMX5x5Yl_sJg:1481599370127"
+						},
+						{
+							"key": "f.req",
+							"value": "[[\"OGB\",[8,\"en\"]],[[],[1],[3],100,\"OGB\"],[5]]"
+						},
+						{
+							"key": "detailId",
+							"value": "589b811fe52ef2d802c5a96e",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "facialId",
+							"value": "['11','22']",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/auth/register",
+			"request": {
+				"url": "http://localhost:8080/auth/register",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"himanshu.jain11@gmail.com\",\n\t\"password\":\"password\",\n\t\"role\":\"caregiver\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/auth/authenticate",
+			"request": {
+				"url": "http://localhost:8080/auth/authenticate",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"email\":\"himanshu.jain11@gmail.com\",\n\t\"password\":\"password\",\n\t\"role\":\"caregiver\"\n}"
+				},
+				"description": "to get token after signup"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/contactDetails/add",
+			"request": {
+				"url": "http://localhost:8080/contactDetails/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGFlMTM1ZTAzMDU4NzIzMmNjNTE0OTciLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDg4MjU3MDMzLCJleHAiOjE0ODg4NjE4MzN9.KPEBe08zTuZ2NkLp9ht8iOhqeJbbflIAO-kONcYbZUY",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/json",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":{\"firstName\":\"Himanshu\",\"middleName\":\"\",\"lastName\":\"Jain\"},\n\t\"address\":{\"street\":\"Carriage circle cmn\",\"city\": \"Fremont\",\"state\":\"CA\", \"zipcode\":94536, \"country\":\"USA\"},\n\t\"phoneNumber\": 6505578534,\n\t\"email\": \"himanshu.jain11@gmail.com\"\n}"
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/facialLibrary/add",
+			"request": {
+				"url": "http://localhost:8080/facialLibrary/add",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYTdjYTkxZjU0NTQwYzRhZmEzYjIiLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDkzMjgwMjg2LCJleHAiOjE0OTM4ODUwODZ9.EVl841IUS0DGOrke10Cf4MY6hmY-VORgYBsB9Nedgdw",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "imageName",
+							"value": "58fea7ca91f54540c4afa3b2",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "imageDescription",
+							"value": "himanshu.jain11",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "uploadedFile",
+							"type": "file",
+							"enabled": true,
+							"src": "hj.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/patients/getCaregivers",
+			"request": {
+				"url": "http://localhost:8080/patients/getCaregivers",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzA4OTA5MiwiZXhwIjoxNDkzNjkzODkyfQ.nPk2X6T0MHpbL8hTughm6OCRWp8XVveZJYjoAQI4C7Q",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "get all caregivers for a patient. patient id fetched from Auth token."
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/caregivers/getPatients",
+			"request": {
+				"url": "http://localhost:8080/caregivers/getPatients",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYTdjYTkxZjU0NTQwYzRhZmEzYjIiLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDkzMDk2MjY3LCJleHAiOjE0OTM3MDEwNjd9.uRzYofovm_n3RQYrDgj_qxTGdYkcsp1Ylh76fd_4zTw",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": "get all patients of a caregiver"
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/patients/addCircle",
+			"request": {
+				"url": "http://localhost:8080/patients/addCircle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzI2MzQ2OSwiZXhwIjoxNDkzODY4MjY5fQ.o2O8LrcnG393D7J0_Qu0F52X4n2JvbPKVb84H4yS-O8",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "circleName",
+							"value": "Family",
+							"type": "text",
+							"enabled": true
+						},
+						{
+							"key": "accessLevel",
+							"value": "2",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/patients/deleteCircle",
+			"request": {
+				"url": "http://localhost:8080/patients/deleteCircle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					},
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzI3OTkxNSwiZXhwIjoxNDkzODg0NzE1fQ.HWvxKsDE4mf6XVH6fQu4di_QMDujJEzmlIUu_ZY28q4",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "circleId",
+							"value": "58cf4832a96e0e3d9cec6918",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/caregivers/addCircle",
+			"request": {
+				"url": "http://localhost:8080/caregivers/addCircle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYTdjYTkxZjU0NTQwYzRhZmEzYjIiLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDkzMjgwMjg2LCJleHAiOjE0OTM4ODUwODZ9.EVl841IUS0DGOrke10Cf4MY6hmY-VORgYBsB9Nedgdw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "circleId",
+							"value": "5901649a0f2a111fa8ef1808",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/caregivers/removeCircle",
+			"request": {
+				"url": "http://localhost:8080/caregivers/removeCircle",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYTdjYTkxZjU0NTQwYzRhZmEzYjIiLCJlbWFpbCI6ImhpbWFuc2h1LmphaW4xMUBnbWFpbC5jb20iLCJyb2xlIjoiY2FyZWdpdmVyIiwiaWF0IjoxNDkzMjgwMjg2LCJleHAiOjE0OTM4ODUwODZ9.EVl841IUS0DGOrke10Cf4MY6hmY-VORgYBsB9Nedgdw",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "circleId",
+							"value": "5901649a0f2a111fa8ef1808",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/facialLibrary/createFaceCollection",
+			"request": {
+				"url": "http://localhost:8080/facialLibrary/createFaceCollection",
+				"method": "GET",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzQ0Njc2OCwiZXhwIjoxNDk0MDUxNTY4fQ.u4ESOCZaxIRusyE8ck9v1NN2-97q7L8d9luidgKnKgo",
+						"description": ""
+					}
+				],
+				"body": {},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/facialLibrary/addFaceToCollection",
+			"request": {
+				"url": "http://localhost:8080/facialLibrary/addFaceToCollection",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzQ0Njc2OCwiZXhwIjoxNDk0MDUxNTY4fQ.u4ESOCZaxIRusyE8ck9v1NN2-97q7L8d9luidgKnKgo",
+						"description": ""
+					},
+					{
+						"key": "Content-Type",
+						"value": "application/x-www-form-urlencoded",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "urlencoded",
+					"urlencoded": [
+						{
+							"key": "caregiverId",
+							"value": "58fea7ca91f54540c4afa3b2",
+							"type": "text",
+							"enabled": true
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		},
+		{
+			"name": "http://localhost:8080/facialLibrary/searchFaceByImage",
+			"request": {
+				"url": "http://localhost:8080/facialLibrary/searchFaceByImage",
+				"method": "POST",
+				"header": [
+					{
+						"key": "Authorization",
+						"value": "JWT eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI1OGZlYThjZTkxZjU0NTQwYzRhZmEzYjQiLCJlbWFpbCI6InBhdGllbnRfMUBnbWFpbC5jb20iLCJyb2xlIjoicGF0aWVudCIsImlhdCI6MTQ5MzQ0Njc2OCwiZXhwIjoxNDk0MDUxNTY4fQ.u4ESOCZaxIRusyE8ck9v1NN2-97q7L8d9luidgKnKgo",
+						"description": ""
+					}
+				],
+				"body": {
+					"mode": "formdata",
+					"formdata": [
+						{
+							"key": "uploadedFile",
+							"type": "file",
+							"enabled": true,
+							"src": "hj.jpg"
+						}
+					]
+				},
+				"description": ""
+			},
+			"response": []
+		}
+	]
+}
